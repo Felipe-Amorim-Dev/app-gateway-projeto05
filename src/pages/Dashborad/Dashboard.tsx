@@ -8,6 +8,14 @@ export function Dashboard() {
         return <p className="text-slate-600">Carregando dashboard...</p>;
     }
 
+    if (!data) {
+        return (
+            <p className="text-red-600">
+                Erro ao carregar dashboard. Verifique a API.
+            </p>
+        );
+    }
+
     return (
         <div>
             <h1 className="text-2xl font-bold text-slate-900">Dashboard</h1>
